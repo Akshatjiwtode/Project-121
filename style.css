@@ -1,0 +1,26 @@
+body {
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+.heading {
+  position: fixed;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px gray;
+  font-size: 28px;
+  letter-spacing: 5px;
+
+}
+
+#camera,
+#result {
+  border: 2px dashed black;
+  width: 350px;
+  height: 300px;
+}
+
+#result_gesture_name{
+  font-size: 50px;
+  color: white;
+
+}

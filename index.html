@@ -1,0 +1,55 @@
+<html>
+
+<head>
+  <title>Emotion To Emoji</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="btn btn-success heading">
+    Gesture - Web app<br>
+    <h4> </h4>
+  </div><br><br><br><br><br>
+  <center>
+    <h3 style="color: white;">Take a selfie of a gesture to know about its meaning</h3>
+    <h4 style="color: white;">On The following emojis the model is trained- </h4>
+    <div class="emojis" style="font-size: 35px">
+      <span>&#128076;</span>
+      <span>&#9996;</span>
+      <span>&#128077;</span>
+    </div>
+
+    <div class="col-md-4 col-sm-12 col-xs-12">
+      <label>Webcam View - </label>
+      <div id="camera"></div>
+      <br><br>
+      <button onclick="take_snapshot()" class="btn btn-warning">Capture Image</button>
+    </div>
+
+
+    <div class="col-md-4 col-sm-12 col-xs-12">
+      <label>Prediction 1 - </label>
+      <p class="gesture_name" id="result_gesture_name"></p>
+      <p class="gesture" id="update_gesture"></p>
+
+    </div>
+
+    <div class="col-md-4 col-sm-12 col-xs-12">
+      <label>Snapshot - </label>
+      <div id="result"></div>
+      <br><br>
+      <button onclick="check();" class="btn btn-success">Predict Gesture</button>
+    </div>
+  </center>
+  <script src="main.js"></script>
+</body>
+
+</html>
